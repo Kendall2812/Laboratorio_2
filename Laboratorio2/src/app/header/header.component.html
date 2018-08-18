@@ -1,0 +1,38 @@
+<header>
+
+  <div class="titulo">
+    <h3>Reportes de Accidentes de Cosevi</h3>
+  </div>
+  <div class="inputs">
+    <button type="button" class="btn btn-lg btn-primary" (click)="printe()">Buscar</button>
+    <div class="fecha">
+      <label for="star">Accidentes Por Año</label>
+      <input type="date" class="form-control" style="height: 42px;" id="start" [(ngModel)]="today" (ngModelChange)="today = $event" name="today" min="2012-01-01" max="2018-12-31" />
+    </div>
+
+    <div class="lugar">
+      <form>
+        <label for="exampleFormControlSelect1">Accidentes por Provincias</label>
+        <select class="form-control" name="select" id="exampleFormControlSelect1" [(ngModel)]="selectedOption" style="height: 42px;">
+          <option *ngFor="let o of options">
+            {{o.name}}
+          </option>
+        </select>
+      </form>
+    </div>
+  </div>
+</header>
+<main>
+  <div style="width: 70%; margin: auto; background-color: rgb(211, 208, 208);">
+    <canvas
+        baseChart
+        [chartType]="'bar'"
+        [datasets]="chartData"
+        [labels]="labels"
+        [options]="chartOptions"
+        [legend]="true"
+        [colors]="colors" #baseChart="base-chart">
+    </canvas>
+  </div>
+</main>
+<br>

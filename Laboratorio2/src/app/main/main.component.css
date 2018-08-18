@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+.tabla{
+    width: 85%;
+    height: 600px;
+    border: 1px solid #f2f2f2;;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.tabla table{
+    width: 190%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.tabla table tbody {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: cornflowerblue;
+}
+.tabla table tbody > tr th{
+    cursor: pointer;
+}
+.tabla table tbody > tr{
+    width: 5%;
+    border-right: 1px solid #f2f2f2;
+}
+.tabla table tbody > tr:hover{
+    background: bisque; /*f2f2f2*/
+}
+.tabla table tbody tr td{
+    padding-right: 97px;
+}
+#titulo{
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: -65px;
+    background-color: darkcyan;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}

@@ -1,0 +1,21 @@
+<h3 id="titulo">Esta tabla tiene los accidentes con sus destalles.</h3>
+<div class="table-responsive tabla">
+
+  <table *ngIf="data" class="table table-sm dataTable" id="example" cellspacing="0">
+
+    <tbody>
+      
+      <tr *ngFor="let bird of data ; let i=index" style="background: tan;"><!--#f2f2f2-->
+        <th *ngIf="bird.fHeader === true" class="th-sm sorting" aria-label="activate to sort column ascending" aria-controls="example">{{bird.fStr}}
+          <i class="fa fa-sort float-right" aria-hidden="true"></i>
+        </th>
+      </tr>
+      <tr *ngFor="let bird of data ;  let o=index;">
+        <td *ngIf="!bird.fHeader">{{bird.fStr}}</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
